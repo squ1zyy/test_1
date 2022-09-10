@@ -1,20 +1,21 @@
-class User:
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
-
-    def get_name(self):
-        return f"My name: {self.name}"
-
-class User_2(User):
-    def __init__(self, name, age, gender, job):
-        super().__init__(self, name, age, gender)
-        self.job = job
+class Car:
+    def __init__(self, engine):
+        self.engine = engine
 
 
-user1 = User('Alex', 12, "M")
-print(user1.get_name())
+class McLaren(self):
+    def __init__(self, engine):
+        super(Audi).__init__(engine)
+        self.model = "720S"
 
-user2 = User_2('Alex', 12, "M")
-print(user2.get_name())
+    def start_engine(self):
+        print("McLaren launched engine.")
+
+
+class Audi(self):
+    def __init__(self, engine):
+        super(Audi).__init__(engine)
+        self.config = "R8"
+
+    def start_engine(self):
+        print("Audi launched engine.")
