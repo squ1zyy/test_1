@@ -1,15 +1,25 @@
 class Car:
     def __init__(self, engine, wheels, transmission, color, motor):
+        self.start_engine_notify = {
+            'launch': f'{self.__class__.__name__} launched engine',
+            'car_heater': f'{self.__class__.__name__} turned on the car heater',
+            'heated_seats': f'{self.__class__.__name__} turned on the heated seats',
+            'play_music': f'{self.__class__.__name__} turned on the relax music',
+        }
+
         self.engine = engine
         self.wheels = wheels
         self.transmission = transmission
         self.color = color
         self.motor = motor
 
+    def start_engine(self):
+        super().start_engine()
+        print('Turned on hypersport.')
 
 class McLaren(Car):
     def __init__(self, engine, wheels, transmission, color, motor):
-        super(McLaren).__init__(engine, wheels, transmission, color, motor)
+        super(McLaren, self).__init__(engine, wheels, transmission, color, motor)
         self.model = "720S"
         self.r_wheels = "19"
 
