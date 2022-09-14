@@ -17,6 +17,7 @@ if req.status_code in [200, 202]:
     print(req.status_code, 'code')
     req.json = req.json()
 
+
 else:
     print('Bad requests.')
     print(req.status_code, 'code')
