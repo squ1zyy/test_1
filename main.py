@@ -66,3 +66,5 @@ class Mercedes(Car):
         print("Mercedes turned on the car heater.")
         print("Mercedes turned on the heated seats.")
         print("Mercedes turned on the relax music.")
+        return
+print('hello world')
